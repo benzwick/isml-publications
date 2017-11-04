@@ -1,0 +1,11 @@
+# Vim swap files
+*.swp
+
+# Directory for PDF files
+pdfs/
+
+# Backups and exported files
+publications.bib.bak
+publications.bib.sav
+publications.html
+ 
