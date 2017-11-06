@@ -1,5 +1,173 @@
 % Encoding: UTF-8
 
+@Bookchapter{2018bourantasmillerstrong,
+  abstract  = {Meshless methods (MMs) were introduced in the late 1970s to solve problems in astrophysics. In MMs the spatial domain is represented by a set of nodes (cloud of points) and not discretized by elements as in most of the mesh-based methods (finite difference method, finite element method, finite volume method); consequently, there is no need for predefined connectivity between the nodes. In this chapter we are going to give an overview of applications, advantages, and disadvantages of various MMs developed and applied in the context of computational biomechanics. Strong and weak formulations will be presented, focusing on the novel interpolation schemes such as modified moving least squares and discretization correction particle strength exchange method, along with the meshless total Lagrangian explicit dynamics method. The applicability of the methods in multiscale problems and their inherent parallelization will be depicted through various applications, along with their advantages over the traditional mesh-based numerical methods. MMs can be considered as mainstream numerical methods able to tackle demanding engineering applications. Intensive and rigorous research in the field will make MMs robust enough to be used by industry.},
+  author    = {G.C. Bourantas and G.R. Joldes and A. Wittek and K. Miller},
+  booktitle = {Numerical Methods and Advanced Simulation in Biomechanics and Biological Processes},
+  doi       = {10.1016/B978-0-12-811718-7.00018-6},
+  editor    = {Cerrolaza, Miguel and Shefelbine, Sandra J. and Garzón-Alvarado, Diego},
+  pages     = {325--339},
+  publisher = {Academic Press},
+  title     = {Strong- and Weak-Form Meshless Methods in Computational Biomechanics},
+  year      = {2018},
+}
+
+@Article{2017bourantasbordasEAwBEimplicit,
+  author   = {G.C. Bourantas and V.C. Loukopoulos and H.A. Chowdhury and G.R. Joldes and K. Miller and S.P.A. Bordas},
+  title    = {An implicit potential method along with a meshless technique for incompressible fluid flows for regular and irregular geometries in 2D and 3D},
+  journal  = {Engineering Analysis with Boundary Elements},
+  year     = {2017},
+  volume   = {77},
+  pages    = {97--111},
+  abstract = {Abstract We present the Implicit Potential (IPOT) numerical scheme developed in the framework of meshless point collocation. The proposed scheme is used for the numerical solution of the steady state, incompressible Navier-Stokes (N-S) equations in their primitive variable (u-v-w-p) formulation. The governing equations are solved in their strong form using either a collocated or a semi-staggered type meshless nodal configuration. The unknown field functions and derivatives are calculated using the Modified Moving Least Squares (MMLS) interpolation method. Both velocity-correction and pressure-correction methods applied ensure the incompressibility constraint and mass conservation. The proposed meshless point collocation (MPC) scheme has the following characteristics: (i) it can be applied, in a straightforward manner to: steady, unsteady, internal and external fluid flows in 2D and 3D, (ii) it equally applies to regular an irregular geometries, (iii) a distribution of points is sufficient, no numerical integration in space nor any mesh structure are required, (iv) there is no need for pressure boundary conditions since no pressure constitutive equation is solved, (v) it is quite simple and accurate, (vi) results can be obtained using collocated or semi-staggered nodal distributions, (vii) there is no need to compute the velocity potential nor the unit normal vectors and (viii) there is no need for a curvilinear system of coordinates. Simulations of fluid flow in 2D and 3D for regular and irregular geometries indicate the validity of the proposed methodology.},
+  doi      = {10.1016/j.enganabound.2017.01.009},
+  file     = {2017bourantasbordasEAwBEimplicit.pdf:2017bourantasbordasEAwBEimplicit.pdf:PDF},
+}
+
+@Article{2017bourantasmillerAMMstrong,
+  author   = {G.C. Bourantas and K.A. Mountris and V.C. Loukopoulos and L. Lavier and G.R. Joldes and A. Wittek and K. Miller},
+  title    = {Strong-form approach to elasticity: hybrid Finite Difference – Meshless Collocation Method (FDMCM)},
+  journal  = {Applied Mathematical Modelling},
+  year     = {2017},
+  note     = {In Press, Accepted Manuscript},
+  abstract = {Abstract We propose a numerical method that combines the Finite Difference (FD) and strong form (collocation) Meshless Method (MM) for solving linear elasticity equations. We call this new method FDMCM. The FDMCM scheme uses a uniform Cartesian grid embedded in complex geometries and applies both methods to calculate spatial derivatives. The spatial domain is represented by a set of nodes categorized as i) boundary and near boundary nodes, and ii) interior nodes. For boundary and near boundary nodes, where the finite difference stencil cannot be defined, the Discretization Corrected Particle Strength Exchange (DC PSE) scheme is used for derivative evaluation, while for interior nodes standard second order Finite Differences are used. FDMCM method combines the advantages of both FD and DC PSE methods. It supports a fast and simple generation of grids and provides convergence rates comparable to weak formulations. We demonstrate the appropriateness and robustness of the proposed scheme through various benchmark problems in 2D and 3D. Numerical results show good accuracy and h- convergence properties. The ease of computational grid generation makes the method particularly suited for problems where geometries are very complicated and known only imperfectly from images, frequently occurring in e.g. geomechanics and patient-specific biomechanics, where the proposed FDMCM method, after its extension to non-linear regime, appears to be a promising alternative to the traditional weak form-based numerical schemes used in the field.},
+  doi      = {10.1016/j.apm.2017.09.028},
+}
+
+@Article{2017junchowdhuryjoldesJoSCelement,
+  author   = {Chowdhury, Habibullah Amin and Wittek, Adam and Miller, Karol and Joldes, Grand Roman},
+  title    = {An Element Free Galerkin Method Based on the Modified Moving Least Squares Approximation},
+  journal  = {Journal of Scientific Computing},
+  year     = {2017},
+  volume   = {71},
+  number   = {3},
+  pages    = {1197--1211},
+  month    = {Jun},
+  abstract = {This paper demonstrates that the recently developed modified moving least squares (MMLS) approximation possess the necessary properties which allow its use as an element free Galerkin (EFG) approximation method. Specifically, the consistency and invariance properties for the MMLS are proven. We demonstrate that MMLS shape functions form a partition of unity and the MMLS approximation satisfies the patch test. The invariance properties are important for the accurate computation of the shape functions by using translation and scaling to a canonical domain. We compare the performance of the EFG method based on MMLS, which uses quadratic base functions, to the performance of the EFG method which uses classical MLS with linear base functions, using both 2D and 3D examples. In 2D we solve an elasticity problem which has an analytical solution (bending of a Timoshenko beam) while in 3D we solve an elasticity problem which has an exact finite element solution (unconstrained compression of a cube). We also solve a complex problem involving complicated geometry, non-linear material, large deformations and contacts. The simulation results demonstrate the superior performance of the MMLS over classical MLS in terms of solution accuracy, while shape functions can be computed using the same nodal distribution and support domain size for both methods.},
+  doi      = {10.1007/s10915-016-0337-z},
+  file     = {2017junchowdhuryjoldesJoSCelement.pdf:2017junchowdhuryjoldesJoSCelement.pdf:PDF},
+}
+
+@Article{2017joldesmillerEAwBEnew,
+  author   = {Grand Roman Joldes and Habib Chowdhury and Adam Wittek and Karol Miller},
+  title    = {A new method for essential boundary conditions imposition in explicit meshless methods},
+  journal  = {Engineering Analysis with Boundary Elements},
+  year     = {2017},
+  volume   = {80},
+  pages    = {94--104},
+  abstract = {Abstract In this paper we present a new technique of enforcing Essential Boundary Conditions (EBC) in Meshless Methods (MMs) based on the Element Free Galerkin (EFG) principles. Imposing EBC is a fundamental issue in MMs. The imposition of prescribed displacement values on the boundary in MMs based on approximating shape functions is not as straightforward as in the Finite Element Method (FEM) because the meshless shape functions are generally not interpolating at nodes. Furthermore, many techniques of enforcing EBC are not compatible with explicit time integration schemes. This paper describes a new method of imposing EBC in EFG based MMs suitable for explicit time integration, named Essential Boundary Conditions Imposition in Explicit Meshless (EBCIEM). The effectiveness of the proposed method is demonstrated using both 2D and 3D numerical examples.},
+  doi      = {10.1016/j.enganabound.2017.03.011},
+  file     = {2017joldesmillerEAwBEnew.pdf:2017joldesmillerEAwBEnew.pdf:PDF},
+}
+
+@Article{2017joldesdoyleSRbioparr,
+  author   = {Grand Roman Joldes and Karol Miller and Adam Wittek and Rachael O. Forsythe and David E. Newby and Barry J. Doyle},
+  title    = {BioPARR: A software system for estimating the rupture potential index for abdominal aortic aneurysms},
+  journal  = {Scientific Reports},
+  year     = {2017},
+  volume   = {7},
+  pages    = {4641},
+  abstract = {An abdominal aortic aneurysm (AAA) is a permanent and irreversible dilation of the lower region of the aorta. It is a symptomless condition that, if left untreated, can expand until rupture. Despite ongoing efforts, an efficient tool for accurate estimation of AAA rupture risk is still not available. Furthermore, a lack of standardisation across current approaches and specific obstacles within computational workflows limit the translation of existing methods to the clinic. This paper presents BioPARR (Biomechanics based Prediction of Aneurysm Rupture Risk), a software system to facilitate the analysis of AAA using a finite element analysis based approach. Except semi-automatic segmentation of the AAA and intraluminal thrombus (ILT) from medical images, the entire analysis is performed automatically. The system is modular and easily expandable, allows the extraction of information from images of different modalities (e.g. CT and MRI) and the simulation of different modelling scenarios (e.g. with/without thrombus). The software uses contemporary methods that eliminate the need for patient-specific material properties, overcoming perhaps the key limitation to all previous patient-specific analysis methods. The software system is robust, free, and will allow researchers to perform comparative evaluation of AAA using a standardised approach. We report preliminary data from 48 cases.},
+  doi      = {10.1038/s41598-017-04699-1},
+  file     = {2017joldesdoyleSRbioparr.pdf:2017joldesdoyleSRbioparr.pdf:PDF},
+}
+
+@Article{2017marjoldesmillerECcomputation,
+  author   = {Grand Roman Joldes and Peter Teakle and Adam Wittek and Karol Miller},
+  title    = {Computation of accurate solutions when using element-free Galerkin methods for solving structural problems},
+  journal  = {Engineering Computations},
+  year     = {2017},
+  volume   = {34},
+  number   = {3},
+  pages    = {902--920},
+  month    = {mar},
+  abstract = {Purpose
+
+This paper investigates the application of adaptive integration in element-free Galerkin methods for solving problems in structural and solid mechanics in order to obtain accurate reference solutions.
+
+Design/methodology/approach
+
+An adaptive quadrature algorithm which allows user control over integration accuracy, previously developed for integrating boundary value problems, is adapted to elasticity problems. The algorithm allows the development of a convergence study procedure that takes into account both integration and discretisation errors. The convergence procedure is demonstrated using an elasticity problem which has an analytical solution and is then applied to accurately solve a soft tissue extension problem involving large deformations.
+
+Findings
+
+The developed convergence procedure, based on the presented adaptive integration scheme, allows the computation of accurate reference solutions for challenging problems which do not have an analytical or finite element solution.
+
+Practical implications
+
+The convergence procedure proposed in this paper allows the user to independently examine and control the contribution of integration and discretisation errors to the overall solution error. The presented procedure allows the computation of reference solutions for very challenging problems which do not have an analytical or even a finite element solution (such as very large deformation problems).
+
+Originality/value
+
+This paper investigates the application of adaptive quadrature to solid mechanics problems in engineering analysis using the element-free Galerkin method in order to obtain accurate reference solutions. The proposed convergence procedure allows the user to independently examine and control the contribution of integration and discretisation errors to the overall solution error. This allows the computation of reference solutions for very challenging problems which do not have an analytical or even a finite element solution (such as very large deformation problems).},
+  doi      = {10.1108/ec-01-2016-0017},
+}
+
+@Article{2017sepkelseydoyleIJfNMiBEcomparison,
+  author   = {Kelsey, Lachlan J. and Powell, Janet T. and Norman, Paul E. and Miller, Karol and Doyle, Barry J.},
+  title    = {A comparison of hemodynamic metrics and intraluminal thrombus burden in a common iliac artery aneurysm},
+  journal  = {International Journal for Numerical Methods in Biomedical Engineering},
+  year     = {2017},
+  volume   = {33},
+  number   = {5},
+  pages    = {e2821},
+  month    = sep,
+  abstract = {Aneurysms of the common iliac artery (CIAA) are typically found in association with an abdominal aortic aneurysm (AAA). Isolated CIAAs, in the absence of an AAA, are uncommon. Similar to AAAs, CIAA may develop intraluminal thrombus (ILT). As isolated CIAAs have a contralateral common iliac artery for comparison, they provide an opportunity to study the hemodynamic mechanisms behind ILT formation.In this study, we compared a large isolated CIAA and the contralateral iliac artery using computational fluid dynamics to determine if hemodynamic metrics correlate with the location of ILT. We performed a comprehensive computational fluid dynamics study and investigated the residence time of platelets and monocytes, velocity fields, time-averaged wall shear stress, oscillatory shear index, and endothelial cell activation potential. We then correlated these data to ILT burden determined with computed tomography.We found that high cell residence times, low time-averaged wall shear stress, high oscillatory shear index, and high endothelial cell activation potential all correlate with regions of ILT development. Our results show agreement with previous hypotheses of thrombus formation in AAA and provide insights into the computational hemodynamics of iliac artery aneurysms.},
+  doi      = {10.1002/cnm.2821},
+  file     = {2017sepkelseydoyleIJfNMiBEcomparison.pdf:2017sepkelseydoyleIJfNMiBEcomparison.pdf:PDF},
+}
+
+@InCollection{2017kelseydoyleeffects,
+  author    = {Lachlan J. Kelsey and Carl Schultz and Karol Miller and Barry J. Doyle},
+  title     = {The Effects of Geometric Variation from {OCT}-Derived 3D Reconstructions on Wall Shear Stress in a Patient-Specific Coronary Artery},
+  booktitle = {Computational Biomechanics for Medicine: From Algorithms to Models and Applications},
+  publisher = {Springer International Publishing},
+  year      = {2017},
+  editor    = {Wittek, Adam and Joldes, Grand and Nielsen, Poul M.F. and Doyle, Barry J. and Miller, Karol},
+  pages     = {1--13},
+  abstract  = {Computational fluid dynamics (CFD) can be used to model the blood flow in patient-specific arterial geometries and predict atherosclerotic plaque progression, as the site specificity of plaques has been shown to depend on the wall shear stress (WSS) experienced by an artery’s endothelial layer. The level of artery wall detail in CFD models is expected to underpin predictions of plaque deposition, as it influences the computation of WSS. In this study, the sensitivity of WSS computation to geometric variation in a (proximally) stented left anterior descending (LAD) coronary artery geometry is investigated. The geometry is reconstructed from intravascular optical coherence tomography (OCT) images, which are registered and merged with computed tomography (CT) to include surrounding arteries. The WSS is modelled for low-, medium- and high-resolution geometries; created by altering the point resolution of the contour algorithm used to trace the (OCT imaged) artery lumen. The results show that areas of low WSS (and thus high thrombotic susceptibility) in the stented portion of the artery depended greatly on the resolution of the geometric reconstruction. Compared with the high-resolution geometry, the low- and medium-resolutions failed to accurately determine the areas of low WSS in the stented region, as minor geometric features were inadequately represented. The sensitivity of WSS to geometric variation is also relevant to analyses using coronary artery geometries derived from other imaging modalities (particularly those of lower resolution than OCT).},
+  doi       = {10.1007/978-3-319-54481-6_1},
+}
+
+@InCollection{2017macraedoyleconstitutive,
+  author    = {Ryley A. Macrae and Jane Pillow and Karol Miller and Barry J. Doyle},
+  title     = {Constitutive Modelling of Lamb Aorta},
+  booktitle = {Computational Biomechanics for Medicine: From Algorithms to Models and Applications},
+  publisher = {Springer},
+  year      = {2017},
+  editor    = {Wittek, Adam and Joldes, Grand and Nielsen, Poul M.F. and Doyle, Barry J. and Miller, Karol},
+  pages     = {15--25},
+  address   = {Cham},
+  abstract  = {Vascular inflammation is an established marker of cardiovascular pathogenesis, particularly atherosclerosis, but its role on arterial tissue biomechanics is not well understood. Its impact on the biomechanics of the aorta can yield valuable data for elucidating its role in disease formation, as well as leading to the development of valuable predictive models for surgery and new treatments. Changes in arterial biomechanics can lead to arterial remodelling and dysfunction, and so its quantification can provide insight into the nature of inflammatory processes. To gain further insight into these processes we investigated the biomechanical behaviour of lamb aortas from inflamed and control groups through the development of a constitutive model. The development of reliable constitutive models of the artery is necessary in order to fully understand the mechanical component of cardiovascular disease pathogenesis and vascular remodelling.
+
+We used a foetal sheep model of systemic inflammation induced by prenatal lipopolysaccharide (LPS) treatment (n = 6) to investigate the effects of short-term inflammation on the passive biomechanical response of the aorta. We subjected samples cut from aortas (LPS, n = 6; control, n = 4) to uniaxial tension testing until failure, measuring vessel dimensions and force–displacement curves.
+
+Upon calibration of a first order Ogden model to fit the data, a difference was found in the μ parameter (4.43 × 10−4 ± 3.67 × 10−4 control, 7.77 × 10−4 ± 6.96 × 10−4 LPS-treated) and no difference was noted in the α parameter (12.96 ± 2.145 control, 12.65 ± 3.378 LPS-treated), although neither finding was statistically significant (p > 0.4, p > 0.8, respectively). Our preliminary ex-vivo data suggests that intra-amniotic LPS-induced systemic inflammation does not significantly change the stiffness or strength of the aorta. With further work, we hope our study can help fully elucidate the role of inflammation on aorta biomechanics.},
+  doi       = {10.1007/978-3-319-54481-6_2},
+}
+
+@InCollection{2017wangwittekcomputation,
+  author    = {Fang Wang and Zhengyang Geng and Sudip Agrawal and Yong Han and Karol Miller and Adam Wittek},
+  title     = {Computation of Brain Deformations Due to Violent Impact: Quantitative Analysis of the Importance of the Choice of Boundary Conditions and Brain Tissue Constitutive Model},
+  booktitle = {Computational Biomechanics for Medicine: From Algorithms to Models and Applications},
+  publisher = {Springer},
+  year      = {2017},
+  editor    = {Wittek, Adam and Joldes, Grand and Nielsen, Poul M.F. and Doyle, Barry J. and Miller, Karol},
+  pages     = {159--173},
+  address   = {Cham},
+  abstract  = {The objective of this study is to quantify the effects of approach for modelling the brain-skull interface and constitutive model of the brain parenchyma on predicting the brain deformations using a previously validated finite element head-brain model (Total HUman Model for Safety, THUMS, was used). Four approaches for modelling of the brain-skull interface and two constitutive models (linear viscoelastic and Odgen hyperviscoelastic) of the brain tissue were employed in computer simulations of the experiments reported in the literature. Comparison of the predicted and experimentally determined magnitude and shape of trajectories of selected points within the brain as well as the maximum principal and shear strain within the brain was conducted. The comparison indicates that the predicted brain responses were strongly affected by both analysed factors. The results suggest that accurate prediction of brain deformations due to violent impact requires a model of the brain-skull interface that allows for movement between the brain outer surface and skull, while preventing complete separation between the brain and skull, and constitutive model that accounts for non-linear stress-strain relationship of the brain tissues.},
+  doi       = {10.1007/978-3-319-54481-6_14},
+}
+
+@Book{2017wittekmillercomputational,
+  title     = {Computational Biomechanics for Medicine: From Algorithms to Models and Applications},
+  publisher = {Springer},
+  year      = {2017},
+  editor    = {Adam Wittek and Grand Joldes and Poul M.F. Nielsen and Barry J. Doyle and Karol Miller},
+  address   = {Cham},
+  doi       = {10.1007/978-3-319-54481-6},
+}
+
 @Article{2016febdoylehoskinsJETcommentary,
   author      = {Doyle, Barry J and Miller, Karol and Newby, David E and Hoskins, Peter R},
   title       = {Commentary: Computational Biomechanics-Based Rupture Prediction of Abdominal Aortic Aneurysms.},
