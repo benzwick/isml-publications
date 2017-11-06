@@ -8,7 +8,15 @@
 	</td>
 	<td>\format[Authors(LastFirst,InitialsNoSpace),HTMLChars]{\author}</td>
 	<td>\year</td>
-	<td>\format[HTMLChars]{\journal}\begin{volume}<br/>Vol. \volume\end{volume}\begin{number}(\format[FormatPagesForHTML]{\number})\end{number}\format[HTMLChars]{\booktitle}\begin{pages}, pp. \format[FormatPagesForHTML]{\pages}\end{pages}\begin{school}<i>School</i>: \format[HTMLChars]{\school}\end{school}\begin{howpublished}\format[HTMLChars]{\howpublished}\end{howpublished}&nbsp;</td>
+	<td>
+		\begin{editor}\format[Authors(LastFirst,InitialsNoSpace),HTMLChars]{\editor} (\format[IfPlural(Eds,Ed.)]{\editor}), \end{editor}
+		<em>\format[HTMLChars]{\journal}\format[HTMLChars]{\booktitle}</em>\begin{volume},
+		vol. \volume\end{volume}\begin{number}(\format[FormatPagesForHTML]{\number})\end{number}\begin{pages},
+		pp. \format[FormatPagesForHTML]{\pages}\end{pages}\begin{publisher},
+		\format[HTMLChars]{\publisher}\end{publisher}\begin{address},
+		\format[HTMLChars]{\address}\end{address}\begin{note},
+		\format[HTMLChars]{\note}\end{note}
+	</td>
 	<td>\format[ToLowerCase]{\entrytype}</td>
 	<td>
 		[<a href="javascript:toggleInfo('\format{\bibtexkey}','bibtex')">BibTeX</a>]</br>
@@ -40,7 +48,7 @@
   edition = {\format[HTMLChars]{\edition}}\end{edition}\begin{note},
   note = {\format[HTMLChars]{\note}}\end{note}\begin{url},
   url = {\format[HTMLChars]{\url}}\end{url}\begin{doi},
-  doi = {\format[DOICheck]{\doi}}\end{doi}
+  doi = {\format[DOIStrip]{\doi}}\end{doi}
 }
 </pre></td>
 </tr>
