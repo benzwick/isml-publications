@@ -1,10 +1,20 @@
 <tr id="\format{\bibtexkey}" class="entry">
-	<td>\format[HTMLChars]{\title} <p class="infolinks">\begin{abstract}[<a href="javascript:toggleInfo('\format{\bibtexkey}','abstract')">Abstract</a>] \end{abstract}\begin{review}[<a href="javascript:toggleInfo('\format{\bibtexkey}','review')">Review</a>] \end{review}[<a href="javascript:toggleInfo('\format{\bibtexkey}','bibtex')">BibTeX</a>]</p></td>
+	<td>
+		\format[HTMLChars]{\title}
+		<p class="infolinks">
+			\begin{abstract}[<a href="javascript:toggleInfo('\format{\bibtexkey}','abstract')">Abstract</a>] \end{abstract}
+			\begin{review}[<a href="javascript:toggleInfo('\format{\bibtexkey}','review')">Review</a>] \end{review}
+		</p>
+	</td>
 	<td>\format[Authors(LastFirst,InitialsNoSpace),HTMLChars]{\author}</td>
 	<td>\year</td>
 	<td>\format[HTMLChars]{\journal}\begin{volume}<br/>Vol. \volume\end{volume}\begin{number}(\format[FormatPagesForHTML]{\number})\end{number}\format[HTMLChars]{\booktitle}\begin{pages}, pp. \format[FormatPagesForHTML]{\pages}\end{pages}\begin{school}<i>School</i>: \format[HTMLChars]{\school}\end{school}\begin{howpublished}\format[HTMLChars]{\howpublished}\end{howpublished}&nbsp;</td>
 	<td>\format[ToLowerCase]{\entrytype}</td>
-	<td>\begin{doi}<a href="\format[DOICheck]{\doi}">DOI</a> \end{doi}\begin{url}<a href="\format{\url}">URL</a>\end{url}&nbsp;</td>
+	<td>
+		[<a href="javascript:toggleInfo('\format{\bibtexkey}','bibtex')">BibTeX</a>]</br>
+		\begin{doi}[<a href="\format[DOICheck]{\doi}">DOI</a>]</br> \end{doi}
+		\begin{url}[<a href="\format{\url}">URL</a>]\end{url}&nbsp;
+	</td>
 </tr>\begin{abstract}
 <tr id="abs_\format{\bibtexkey}" class="abstract noshow">
 	<td colspan="6"><b>Abstract</b>: \format[HTMLChars]{\abstract}</td>
