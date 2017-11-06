@@ -12,6 +12,7 @@
 	<td>\format[ToLowerCase]{\entrytype}</td>
 	<td>
 		[<a href="javascript:toggleInfo('\format{\bibtexkey}','bibtex')">BibTeX</a>]</br>
+		\begin{file}[<a href="/ISML/Publication/pdfs/\format[FileLink(pdf)]{\file}">PDF</a>]<br/>\end{file}
 		\begin{doi}[<a href="\format[DOICheck]{\doi}">DOI</a>]</br> \end{doi}
 		\begin{url}[<a href="\format{\url}">URL</a>]\end{url}&nbsp;
 	</td>
