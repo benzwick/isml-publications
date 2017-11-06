@@ -1,1 +1,38 @@
-# isml-publications
+#+TITLE: ISML publications list
+
+[[http://isml.ecm.uwa.edu.au/ISML/index.php/ISML_Publications][ISML Publications]]
+
+** JabRef
+
+[[http://www.jabref.org][JabRef]] is used to create the BibTeX database
+and to export the database to HTML format.
+
+*** BibTeX key pattern
+
+: [year][month:lower][auth:lower][authorLast:lower][journal:abbr][veryshorttitle:lower]
+
+*** PDF files
+
+PDF files are named according to the BibTeX key.
+
+*** Sorting order (save and export)
+
+1. Year (descending)
+2. Author
+3. Title
+
+*** Export to HTML
+
+First, add =isml-tablerefsabsbib.layout= to JabRef's Custom Exports
+(Options -> Manage custom exports -> Add new)
+using the following export properties:
+
+| Export name      | isml-tablerefsabsbib                       |
+| Main layout file | PATH/TO/LAYOUT/isml-tablerefsabsbib.layout |
+| Extension        | html                                       |
+
+To export to HTML run the following command:
+
+: $ jabref --nogui publications.bib --output publications.html,isml-tablerefsabsbib
+
+Alternatively, you can use the JabRef GUI (refer to the JabRef documentation).
